@@ -101,7 +101,7 @@ $(function() {
 		    	  var thisRow = thisCell.parent();
 		    	  var countCell = $(thisRow).find('td:last');
 		          var rowIdx = thisRow.index();
-		          var colIdx = thisCell.index()-1;//subract 1 to use to update attendence array in student model
+		          var colIdx = thisCell.index()-1;//subtract 1 to use to update attendance array in student model
 		    	  console.log('Checkbox clicked. Student: ' + rowIdx + ', Day: ' + colIdx + ', missed? ' + !$(this).prop('checked'));
 		    	  controller.setStudentAttendance(rowIdx, colIdx, !$(this).prop('checked'));
 		    	  $(countCell).html(controller.getStudentMissingInfo(rowIdx));
